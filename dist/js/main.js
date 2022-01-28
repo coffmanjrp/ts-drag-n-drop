@@ -24,12 +24,11 @@ function dragDrop() {
     this.className = 'empty';
     this.append(fill);
 }
-for (var _i = 0, empties_1 = empties; _i < empties_1.length; _i++) {
-    var empty = empties_1[_i];
+empties.forEach(function (empty) {
     empty.addEventListener('dragover', dragOver);
     empty.addEventListener('dragenter', dragEnter);
     empty.addEventListener('dragleave', dragLeave);
     empty.addEventListener('drop', dragDrop);
-}
+});
 fill.addEventListener('dragstart', dragStart);
 fill.addEventListener('dragend', dragEnd);
